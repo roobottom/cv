@@ -1,0 +1,12 @@
+{% macro careerAside (items, classes) %}
+
+<aside class="{{ classes }}">
+  <dl>
+    {% for item in items %}
+    <dt>{{ item.title }}</dt>
+    <dd>{{ item.html | safe }}</dd>
+    {% endfor %}
+  </dl>
+</aside>
+
+{% endmacro %}

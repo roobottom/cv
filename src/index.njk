@@ -1,4 +1,4 @@
-
+{% from 'components/career.njk' import careerAside as careerAside  %}
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
@@ -88,18 +88,14 @@
 
       <article>
         <h3>Roodesign</h3>
-        
-
-<aside class="">
-  <dl>
-    
-    <dt>Dates</dt>
-    <dd>From <time datetime="2018-08-11">October 2018</time></dd>
-    
-  </dl>
-</aside>
-
-
+        {{ careerAside(
+          items = [
+            {
+              'title': 'Dates',
+              'html': 'From <time datetime="2018-08-11">October 2018</time>'
+            }
+          ]
+        ) }}
         <aside>
           <dl>
             <dt>Dates</dt>
