@@ -1,21 +1,6 @@
-/* Level the playingfield */
-body {
-  margin: 0;
-}
-
-strong {
-  font-weight: bold;
-}
-
-em {
-  font-style: italic;
-}
-
-img {
-  border-style: none;
-}
-
-/* set some variables */
+/* -------------------------- */
+/* Variables */
+/* -------------------------- */
 :root {
   --font-size: 1rem;
   --ratio: 1.333;
@@ -25,36 +10,89 @@ img {
   --h3: calc(var(--h4) * var(--ratio));
   --h2: calc(var(--h3) * var(--ratio));
   --h1: calc(var(--h2) * var(--ratio));
+
+  --gap: 1.25rem;
 }
 
 @media screen and (min-width: 64em) {
   :root {
     --font-size: 1.125rem;
     --ratio: 1.23;
+    --gap: 1.875rem;
   }
 }
 
-/* define typography */
+@font-face {
+    font-family: 'YoungSerif';
+    src: url('fonts/YoungSerif.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Orkney';
+    src: url('fonts/Orkney Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orkney';
+    src: url('fonts/Orkney Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Orkney';
+    src: url('fonts/Orkney Regular Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Orkney';
+    src: url('fonts/Orkney Bold Italic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+}
+
+body {
+  margin: 0;
+  font-family: 'Orkney', sans-serif;
+  padding: 0 var(--gap);
+}
+
+img {
+  border-style: none;
+}
+
+
+/* -------------------------- */
+/* Typography */
+/* -------------------------- */
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+h1,h2,h3,h4,h5 {
+  font-family: 'YoungSerif', serif;
+}
 p, li, dd {
   font-size: var(--font-size);
 }
-
 h5, .h5 {
   font-size: var(--h4);
 }
-
 h4, .h4 {
   font-size: var(--h4);
 }
-
 h3, .h3 {
   font-size: var(--h3);
 }
-
 h2, .h2 {
   font-size: var(--h2);
 }
-
 h1, .h1 {
   font-size: var(--h1);
 }
