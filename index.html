@@ -1,9 +1,9 @@
-
+{% from 'components/career.njk' import careerAside as careerAside  %}
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Jon Roobottom's CV (Résumé)</title>
+  <title>Jon Roobottom’s CV/Résumé</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,32 +14,52 @@
 </head>
 
 <body>
-  
-  <header>
-    <h1>Jon Roobottom's CV (Résumé)</h1>
+  <a class="sr" href="#navigation">Skip to Navigation</a>
+
+    <h1>Jon Roobottom’s CV/Résumé</h1>
+
+    <nav role="navigation" title="Table of Contents">
+      <h2>Table of contents</h2>
+
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#information">Personal Information</a></li>
+        <li><a href="#beliefs">What I believe in</a></li>
+        <li><a href="#skills">My skills</a></li>
+        <li><a href="#timeline">My career timeline</a>
+          <ul>
+            <li><a href="#role-roodesign">From October 2018: Freelance designer</a></li>
+            <li><a href="#role-firefly-3">From April 2017: Head of Design for product and communications at Firefly Learning</a></li>
+            <li><a href="#role-firefly-2">From September 2014: Head of design and front-end development at Firefly Learning</a></li>
+            <li><a href="#role-firefly-1">From September 2001: Senior designer and front-end developer at Firefly Learning</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
     
-    <article>
+    
+    <article id="introduction" title="Introduction">
       <h2>I create digital products and services</h2>
       <p>I'm a designer with 20 years of experience in creating digital products and websites.</p>
-      <p>I was born and bred in the industrial Black Country I always wanted to follow my dad and grandfather into a career in engineering. I studied electrical engineering at University but a year in I rediscovered my love of design and switched my degree.</p>
+      <p>Born and bred in the industrial Black Country — I always wanted to follow my father and grandfather into a career in engineering. I studied electrical engineering at University, but a year in I rediscovered my love of design and switched my degree.</p>
       <p>Now living by the sea in Sussex, I have a foot in both worlds: I bring a no-nonsense approach to the design process; a ton of practical, hands-on expertise in building things for the web; and systems-thinking in everything I do.</p>
       <p>Great work always comes from working with others, and over the last seven years, I've led teams of designers and developers in creating things that people love.</p>
     </article>
 
-    <aside>
-      <h2>Information at a glance</h2>
-      <h3>Personal Information</h3>
+    <aside id="information" title="Personal Information">
+      <h2>Personal Information</h2>
+      <h3>Contact details</h3>
       <dl class="vcard">
         <dt>Name</dt>
         <dd class="fn n">
-          <a href="https://roodesign.co.uk" class="url">
+          <a href="https://roodesign.co.uk" class="url" title="Jon Roobottom's portfolio website">
             <span class="given-name">Jonathan</span>
             <span class="additional-name">James</span>
             <span class="family-name">Roobottom</span>
           </a>
         </dd>
         <dt>Email</dt>
-        <dd><a class="email" href="mailto:roo@roodesign.co.uk">roo@roodesign.co.uk</a></dd>
+        <dd><a class="email" href="mailto:roo@roodesign.co.uk" title="Send an email to Jon Roobottom">roo@roodesign.co.uk</a></dd>
         <dt>Telephone</dt>
         <dd class="tel">+44 7766 256899</dd>
         <dt>Location</dt>
@@ -50,82 +70,68 @@
       <h3>Portfolio</h3>
       <p><a href="https://roodesign.co.uk/case-studies">See case studies on my website</a></p>
     </aside>
-  </header>
-
-
-  
-
-  <main>
     
-    <section id="beliefs">
-
+    <article id="beliefs" title="What I believe in">
+      <h2>What I believe in</h2>
+      
       <aside>
         <p>This section is intended to give you a snapshot of who I am and what I stand for. </p>
       </aside>
 
-      <article>
-        <h2>What I believe in</h2>
-        <h3>Empathy</h2>
-        <p>I believe in a human-centred design approach.</p>
-        <h3>Prototyping</h3>
-        <p>I believing in testing early with real people.</p>
-        <h3>Collaboration</h3>
-        <p>I believe that great things happen when all kinds of people work together.</p>
-        <h3>Creativity</h3>
-        <p>I believe in encouraging wild ideas.</p>
-        <h3>Big picture</h3>
-        <p>I believe in constantly checking that solutions fit into the bigger picture.</p> 
-        <h3>Small systems</h3>
-        <p>I believe in using small, repeatable chunks to ensure consistency.</p>
-        <h3>Code</h3>
-        <p>I believe that designers should code.</p>
-      </article>
+      <h3>Empathy</h2>
+      <p>I believe in a human-centred design approach.</p>
+      <h3>Prototyping</h3>
+      <p>I believing in testing early with real people.</p>
+      <h3>Collaboration</h3>
+      <p>I believe that great things happen when all kinds of people work together.</p>
+      <h3>Creativity</h3>
+      <p>I believe in encouraging wild ideas.</p>
+      <h3>Big picture</h3>
+      <p>I believe in constantly checking that solutions fit into the bigger picture.</p> 
+      <h3>Small systems</h3>
+      <p>I believe in using small, repeatable chunks to ensure consistency.</p>
+      <h3>Code</h3>
+      <p>I believe that designers should code.</p>
+    </article>
 
-    </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <article>
-        <h3>Design</h3>
-        <ul>
-          <li>Design Thinking</li>
-          <li>Workshop design &amp; facilitation</li>
-          <li>Research planning and execution</li>
-          <li>Wireframing</li>
-          <li>Rapid prototyping</li>
-          <li>Iteration design</li>
-          <li>Visual design</li>
-          <li>Creating Pattern portfolios &amp; design systems</li>
-        </ul>
-      </article>
-      <article>
-        <h3>Strategy &amp; operational</h3>
-        <ul>
-          <li>Design strategy</li>
-          <li>Agile methodologies</li>
-          <li>Systems thinking</li>
-          <li>Team leadership</li>
-        </ul>
-      </article>
-      <article>
-        <h3>Front-end development</h3>
-        <ul>
-          <li>Accessible HTML, CSS</li>
-          <li>Javascript</li>
-          <li>Frameworks like jQuery and Vue.js</li>
-          <li>Templating languages like Nunjucks and Liquid</li>
-          <li>Git</li>
-        </ul>
-      </article>
-    </section>
+    <article id="skills" title="My skills">
+      <h2>My skills</h2>
+      <h3>Design skills</h3>
+      <ul>
+        <li>Design Thinking</li>
+        <li>Workshop design &amp; facilitation</li>
+        <li>Research planning and execution</li>
+        <li>Wireframing</li>
+        <li>Rapid prototyping</li>
+        <li>Iteration design</li>
+        <li>Visual design</li>
+        <li>Creating Pattern portfolios &amp; design systems</li>
+      </ul>
+      <h3>Strategy &amp; operational skills</h3>
+      <ul>
+        <li>Design strategy</li>
+        <li>Agile methodologies</li>
+        <li>Systems thinking</li>
+        <li>Team leadership</li>
+      </ul>
+      <h3>Front-end development skills</h3>
+      <ul>
+        <li>Accessible HTML, CSS</li>
+        <li>Javascript</li>
+        <li>Frameworks like jQuery and Vue.js</li>
+        <li>Templating languages like Nunjucks and Liquid</li>
+        <li>Git</li>
+      </ul>
+    </article>
 
-    <section id="timeline">
-      <h2>Career timeline</h2>
+    <section id="timeline" title="My career timeline">
+      <h2>My career timeline</h2>
 
-      <article class="role" id="role-roodesign">
-        <h3>Freelance hand-on design and design consultancy</h3>
+      <article class="role" id="role-roodesign" title="From Octover 2018 I've been a freelance designer for Roodesign">
+        <h3>Freelance designer</h3>
         <aside>
-          <dl>
+          <dl title="Information about this role">
             <dt>Dates</dt>
             <dd>From <time datetime="2018-08-11">October 2018</time></dd>
             <dt>Organisation</dt>
@@ -172,10 +178,10 @@
         </ul>
       </article>
 
-      <article class="role" id="role-firefly-3">
+      <article class="role" id="role-firefly-3" title="From April 2017 until October 2018 I was Head of Design for product and communications at Firefly Learning">
         <h3>Head of Design for product and communications</h3>
         <aside>
-          <dl>
+          <dl title="Information about this role">
             <dt>Dates</dt>
             <dd>From <time datetime="2017-04-02">April 2017</time> Until <time datetime="2018-08-10">October 2018</time></dd>
             <dt>Organisation</dt>
@@ -197,10 +203,10 @@
         </ul>
       </article>
 
-      <article class="role" id="role-firefly-2">
+      <article class="role" id="role-firefly-2" title="From September 2014 until April 2017 I was Head of design and front-end development at Firefly Learning">
         <h3>Head of design and front-end development</h3>
         <aside>
-          <dl>
+          <dl title="Information about this role">
             <dt>Dates</dt>
             <dd>From <time datetime="2017-11-02">September 2014</time> Until <time datetime="2017-04-01">April 2017</time></dd>
             <dt>Organisation</dt>
@@ -222,10 +228,10 @@
         </ul>
       </article>
 
-      <article class="role" id="role-firefly-1">
+      <article class="role" id="role-firefly-1" title="From September 2011 until September 2014 I was a Senior Designer/front-end developer at Firefly Learning">
         <h3>Senior designer and front-end developer</h3>
         <aside>
-          <dl>
+          <dl title="Information about this role">
             <dt>Dates</dt>
             <dd>From <time datetime="2017-11-02">September 2011</time> Until <time datetime="2017-11-01">September 2014</time></dd>
             <dt>Organisation</dt>
@@ -248,8 +254,7 @@
 
     
     </section>
-    
-  </main>
+  
 
 
 

@@ -1,0 +1,84 @@
+/* Level the playingfield */
+body {
+  margin: 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  border-style: none;
+}
+
+/* set some variables */
+:root {
+  --font-size: 1rem;
+  --ratio: 1.333;
+
+  --h5: calc(var(--font-size) * var(--ratio));
+  --h4: calc(var(--h5) * var(--ratio));
+  --h3: calc(var(--h4) * var(--ratio));
+  --h2: calc(var(--h3) * var(--ratio));
+  --h1: calc(var(--h2) * var(--ratio));
+}
+
+@media screen and (min-width: 64em) {
+  :root {
+    --font-size: 1.125rem;
+    --ratio: 1.23;
+  }
+}
+
+/* define typography */
+p, li, dd {
+  font-size: var(--font-size);
+}
+
+h5, .h5 {
+  font-size: var(--h4);
+}
+
+h4, .h4 {
+  font-size: var(--h4);
+}
+
+h3, .h3 {
+  font-size: var(--h3);
+}
+
+h2, .h2 {
+  font-size: var(--h2);
+}
+
+h1, .h1 {
+  font-size: var(--h1);
+}
+
+*:target {
+  background-color: yellow;
+}
+
+@supports (animation: highlight) {
+  *:target {
+    background-color: transparent;
+    animation: highlight 2s;
+  }
+}
+
+@keyframes highlight {
+  from {
+    background-color: yellow;
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+a:focus {
+  outline: 1px solid;
+}
