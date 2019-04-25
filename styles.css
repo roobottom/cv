@@ -1,25 +1,20 @@
+/* typographic reset */
+
+html, body, section, nav, article, aside, h1, h2, h3, h4, h5, h6, hgroup, header, footer, address, p, hr, pre, blockquote, ol, ul, li, dl, dt, dd, figure, figcaption, div, table, caption, form, fieldset {
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
 /* -------------------------- */
 /* Variables */
 /* -------------------------- */
 :root {
-  --font-size: 1rem;
-  --ratio: 1.333;
-
-  --h5: calc(var(--font-size) * var(--ratio));
-  --h4: calc(var(--h5) * var(--ratio));
-  --h3: calc(var(--h4) * var(--ratio));
-  --h2: calc(var(--h3) * var(--ratio));
-  --h1: calc(var(--h2) * var(--ratio));
-
   --gap: 1.25rem;
 }
 
 @media screen and (min-width: 64em) {
-  :root {
-    --font-size: 1.125rem;
-    --ratio: 1.23;
-    --gap: 1.875rem;
-  }
+
 }
 
 @font-face {
@@ -56,9 +51,9 @@
 }
 
 body {
-  margin: 0;
   font-family: 'Orkney', sans-serif;
   padding: 0 var(--gap);
+  font-size: var(--font-size);
 }
 
 img {
@@ -69,6 +64,7 @@ img {
 /* -------------------------- */
 /* Typography */
 /* -------------------------- */
+
 strong {
   font-weight: bold;
 }
@@ -78,24 +74,28 @@ em {
 h1,h2,h3,h4,h5 {
   font-family: 'YoungSerif', serif;
 }
-p, li, dd {
-  font-size: var(--font-size);
+p, ul, ol, dl, h6, .h6 {
+  max-width: 38rem;
+  font-size: 1rem; /* 16px */
+  margin: 1.3125em 0; /* 21px */
+  line-height: 1.3125em; /* 21px */
 }
+
+h6, .h6 {
+  font-family: 'Orkney', sans-serif;
+  text-transform: uppercase;
+}
+
 h5, .h5 {
-  font-size: var(--h4);
+  font-size: 1.25rem; /* 20px */
+  margin: 1.05em 0; /* 21px */
+  line-height: 1.05em; /* 21px; */
 }
+
 h4, .h4 {
-  font-size: var(--h4);
+  
 }
-h3, .h3 {
-  font-size: var(--h3);
-}
-h2, .h2 {
-  font-size: var(--h2);
-}
-h1, .h1 {
-  font-size: var(--h1);
-}
+
 
 *:target {
   background-color: yellow;

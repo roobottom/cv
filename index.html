@@ -17,13 +17,13 @@
 
     <h1>Jon Roobottom’s CV/Résumé</h1>
 
-    <nav role="navigation" title="Table of Contents">
-      <h2>Table of contents</h2>
+    <nav aria-labelledby="navigation-title" id="navigation">
+      <h2 id="navigation-title">Table of contents</h2>
 
       <ul>
         <li><a href="#introduction">Introduction</a></li>
         <li><a href="#information">Personal Information</a></li>
-        <li><a href="#beliefs">What I believe in</a></li>
+        <li><a href="#values">What I value</a></li>
         <li><a href="#skills">My skills</a></li>
         <li><a href="#timeline">My career timeline</a>
           <ul>
@@ -37,28 +37,29 @@
     </nav>
     
     
-    <article id="introduction" title="Introduction">
-      <h2>I create digital products and services</h2>
+    <article id="introduction" aria-labelledby="introduction-title">
+      <h2 id="introduction-title">Introduction</h2>
+      <h3>I create digital products and services</h3>
       <p>I'm a designer with 20 years of experience in creating digital products and websites.</p>
       <p>Born and bred in the industrial Black Country — I always wanted to follow my father and grandfather into a career in engineering. I studied electrical engineering at University, but a year in I rediscovered my love of design and switched my degree.</p>
       <p>Now living by the sea in Sussex, I have a foot in both worlds: I bring a no-nonsense approach to the design process; a ton of practical, hands-on expertise in building things for the web; and systems-thinking in everything I do.</p>
       <p>Great work always comes from working with others, and over the last seven years, I've led teams of designers and developers in creating things that people love.</p>
     </article>
 
-    <aside id="information" title="Personal Information">
-      <h2>Personal Information</h2>
+    <aside id="information" aria-labelledby="information-title">
+      <h2 id="information-title">Personal Information</h2>
       <h3>Contact details</h3>
       <dl class="vcard">
         <dt>Name</dt>
         <dd class="fn n">
-          <a href="https://roodesign.co.uk" class="url" title="Jon Roobottom's portfolio website">
+          <a href="https://roodesign.co.uk" class="url" aria-label="Jon Roobottom's portfolio website">
             <span class="given-name">Jonathan</span>
             <span class="additional-name">James</span>
             <span class="family-name">Roobottom</span>
           </a>
         </dd>
         <dt>Email</dt>
-        <dd><a class="email" href="mailto:roo@roodesign.co.uk" title="Send an email to Jon Roobottom">roo@roodesign.co.uk</a></dd>
+        <dd><a class="email" href="mailto:roo@roodesign.co.uk" aria-label="Send an email to Jon Roobottom">roo@roodesign.co.uk</a></dd>
         <dt>Telephone</dt>
         <dd class="tel">+44 7766 256899</dd>
         <dt>Location</dt>
@@ -70,14 +71,14 @@
       <p><a href="https://roodesign.co.uk/case-studies">See case studies on my website</a></p>
     </aside>
     
-    <article id="beliefs" title="What I believe in">
-      <h2>What I believe in</h2>
+    <article id="values" aria-labelledby="values-title">
+      <h2 id="values-title">What I value</h2>
       
       <aside>
-        <p>This section is intended to give you a snapshot of who I am and what I stand for. </p>
+        <p>This section is intended to give you a snapshot of who I am and what I stand for.</p>
       </aside>
 
-      <h3>Empathy</h2>
+      <h3>Empathy</h3>
       <p>I believe in a human-centred design approach.</p>
       <h3>Prototyping</h3>
       <p>I believing in testing early with real people.</p>
@@ -94,8 +95,8 @@
     </article>
 
 
-    <article id="skills" title="My skills">
-      <h2>My skills</h2>
+    <article id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">My skills</h2>
       <h3>Design skills</h3>
       <ul>
         <li>Design Thinking</li>
@@ -119,16 +120,16 @@
         <li>Accessible HTML, CSS</li>
         <li>Javascript</li>
         <li>Frameworks like jQuery and Vue.js</li>
-        <li>Templating languages like Nunjucks and Liquid</li>
+        <li>Template languages like Nunjucks and Liquid</li>
         <li>Git</li>
       </ul>
     </article>
 
-    <section id="timeline" title="My career timeline">
-      <h2>My career timeline</h2>
+    <section id="timeline" aria-labelledby="timeline-title">
+      <h2 id="timeline-title">My career timeline</h2>
 
-      <article class="role" id="role-roodesign" title="From Octover 2018 I've been a freelance designer for Roodesign">
-        <h3>Freelance designer</h3>
+      <article class="role" id="role-roodesign" aria-labelledby="role-roodesign-title">
+        <h3 id="role-roodesign-title">From October 2018: Freelance designer</h3>
         <aside>
           <dl title="Information about this role">
             <dt>Dates</dt>
@@ -139,12 +140,11 @@
             <dd>Founder</dd>
             <dt>Location</dt>
             <dd>Littlehampton, United Kingdom</dd>
-            <dt>
           </dl>
         </aside>
         <h4>Digital product designer. Design team leader. Web developer.</h4>
         <p>I work with agencies and directly for clients. I help them realise the potential of their digital products and services. I work in the following areas:</p>
-        <h5>Hands-on design</h5>
+        <h5 class="h6">Hands-on design</h5>
         <ul>
           <li>Visual design</li>
           <li>Interaction design</li>
@@ -154,22 +154,22 @@
           <li>Prototyping</li>
           <li>User testing</li>
         </ul>
-        <h5>Front-end development</h5>
+        <h5 class="h6">Front-end development</h5>
         <ul>
           <li>Clean and accessible HTML and CSS</li>
           <li>Javascript development</li>
           <li>Creating modularised pattern portfolios</li>
           <li>Creating build processes with Node.js and Gulp</li>
         </ul>
-        <h5>Team leadership and org-design</h5>
-        <p>I work with business on a short/medium term basis to:</li>
+        <h5 class="h6">Team leadership and org-design</h5>
+        <p>I work with business on a short/medium term basis to:</p>
         <ul>
           <li>Clarify roles and responsibilities and identify skill gaps</li>
           <li>Hire and on-board the right people</li>
           <li>Mentor team-members and leaders</li>
         </ul>
-        <h5>Strategy and process</h5>
-        <p>I help senior leaders and C-Suites to:</p>
+        <h5 class="h6">Strategy and process</h5>
+        <p>I help senior leaders and <abbr title="The directors of a company. For example, Chief Executive Officer.">C-Suites</abbr> to:</p>
         <ul>
           <li>Understand the power in a user-centred design process</li>
           <li>Leverage design insights to make business decisions</li>
@@ -177,8 +177,8 @@
         </ul>
       </article>
 
-      <article class="role" id="role-firefly-3" title="From April 2017 until October 2018 I was Head of Design for product and communications at Firefly Learning">
-        <h3>Head of Design for product and communications</h3>
+      <article class="role" id="role-firefly-3" aria-labelledby="role-firefly-3-title">
+        <h3 id="role-firefly-3-title">From April 2017: Head of Design for product and communications at Firefly Learning</h3>
         <aside>
           <dl title="Information about this role">
             <dt>Dates</dt>
@@ -189,7 +189,6 @@
             <dd>Head of Design</dd>
             <dt>Location</dt>
             <dd>London, United Kingdom</dd>
-            <dt>
           </dl>
         </aside>
         <p>As Head of Design I was part of Firefly's senior leadership team. I was in charge of Firefly's design efforts across product and brand communications. I led key initiatives that helped cement Firefly's reputation as a leader within the EdTech space:</p>
@@ -202,8 +201,8 @@
         </ul>
       </article>
 
-      <article class="role" id="role-firefly-2" title="From September 2014 until April 2017 I was Head of design and front-end development at Firefly Learning">
-        <h3>Head of design and front-end development</h3>
+      <article class="role" id="role-firefly-2" aria-labelledby="role-firefly-2-title">
+        <h3 id="role-firefly-2-title">From September 2014: Head of design and front-end development at Firefly Learning</h3>
         <aside>
           <dl title="Information about this role">
             <dt>Dates</dt>
@@ -214,7 +213,6 @@
             <dd>Head of Design</dd>
             <dt>Location</dt>
             <dd>London, United Kingdom</dd>
-            <dt>
           </dl>
         </aside>
         <p>I ran a combined design and front-end development team as part of Firefly's senior leadership team and oversaw some key initiatives that helped build the foundation for a robust, future-proof web application:</p>
@@ -227,8 +225,8 @@
         </ul>
       </article>
 
-      <article class="role" id="role-firefly-1" title="From September 2011 until September 2014 I was a Senior Designer/front-end developer at Firefly Learning">
-        <h3>Senior designer and front-end developer</h3>
+      <article class="role" id="role-firefly-1" aria-labelledby="role-firefly-1-title">
+        <h3 id="role-firefly-1-title">From September 2011: Senior designer and front-end developer at Firefly Learning</h3>
         <aside>
           <dl title="Information about this role">
             <dt>Dates</dt>
@@ -239,7 +237,6 @@
             <dd>Designer/front-end developer</dd>
             <dt>Location</dt>
             <dd>London, United Kingdom</dd>
-            <dt>
           </dl>
         </aside>
         <p>Early on, Firefly offered a number of bespoke services like web and custom intranet design and build in addition to developing our product. During this time:</p>

@@ -1,0 +1,22 @@
+{
+  "name": "jon-roobottom-cv",
+  "version": "1.0.0",
+  "description": "Jon Roobottom's CV/Resume",
+  "main": "index.js",
+  "scripts": {
+    "go": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roobottom/cv.git"
+  },
+  "author": "Jonathan James Roobottom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roobottom/cv/issues"
+  },
+  "homepage": "https://github.com/roobottom/cv#readme",
+  "devDependencies": {
+    "postcss": "^7.0.14"
+  }
+}
