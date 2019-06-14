@@ -1,122 +1,142 @@
-/* typographic reset */
-
 html, body, section, nav, article, aside, h1, h2, h3, h4, h5, h6, hgroup, header, footer, address, p, hr, pre, blockquote, ol, ul, li, dl, dt, dd, figure, figcaption, div, table, caption, form, fieldset {
   vertical-align: baseline;
   margin: 0;
-  padding: 0;
-}
-
-/* -------------------------- */
-/* Variables */
-/* -------------------------- */
-:root {
-  --gap: 1.25rem;
-}
-
-@media screen and (min-width: 64em) {
-
-}
+  padding: 0; }
 
 @font-face {
-    font-family: 'YoungSerif';
-    src: url('fonts/YoungSerif.woff2') format('woff2');
-}
+  font-family: 'YoungSerif';
+  src: url("fonts/YoungSerif.woff2") format("woff2"); }
 
 @font-face {
-    font-family: 'Orkney';
-    src: url('fonts/Orkney Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
+  font-family: 'Orkney';
+  src: url("fonts/Orkney Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
 
 @font-face {
-    font-family: 'Orkney';
-    src: url('fonts/Orkney Bold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-}
+  font-family: 'Orkney';
+  src: url("fonts/Orkney Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal; }
 
 @font-face {
-    font-family: 'Orkney';
-    src: url('fonts/Orkney Regular Italic.woff2') format('woff2');
-    font-weight: normal;
-    font-style: italic;
-}
+  font-family: 'Orkney';
+  src: url("fonts/Orkney Regular Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic; }
 
 @font-face {
-    font-family: 'Orkney';
-    src: url('fonts/Orkney Bold Italic.woff2') format('woff2');
-    font-weight: bold;
-    font-style: italic;
-}
+  font-family: 'Orkney';
+  src: url("fonts/Orkney Bold Italic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic; }
 
 body {
-  font-family: 'Orkney', sans-serif;
-  padding: 0 var(--gap);
-  font-size: var(--font-size);
-}
+  font-family: 'Orkney', sans-serif; }
 
 img {
-  border-style: none;
-}
+  border-style: none; }
 
+.sr {
+  display: none; }
 
 /* -------------------------- */
 /* Typography */
 /* -------------------------- */
+:root {
+  --base-type-size: 16;
+  --base-line-height: 21;
+  --type-scale: 1.33;
+  --type-ratio: 1; }
 
 strong {
-  font-weight: bold;
-}
+  font-weight: bold; }
+
 em {
-  font-style: italic;
-}
-h1,h2,h3,h4,h5 {
-  font-family: 'YoungSerif', serif;
-}
-p, ul, ol, dl, h6, .h6 {
-  max-width: 38rem;
-  font-size: 1rem; /* 16px */
-  margin: 1.3125em 0; /* 21px */
-  line-height: 1.3125em; /* 21px */
-}
+  font-style: italic; }
+
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+  font-family: 'YoungSerif', serif; }
 
 h6, .h6 {
   font-family: 'Orkney', sans-serif;
-  text-transform: uppercase;
-}
+  font-variant: all-small-caps; }
 
-h5, .h5 {
-  font-size: 1.25rem; /* 20px */
-  margin: 1.05em 0; /* 21px */
-  line-height: 1.05em; /* 21px; */
-}
+p, dl, h6, .h6 {
+  font-size: calc( var(--type-ratio) * (var(--base-type-size) / var(--base-type-size)) * 1em);
+  line-height: calc( (var(--base-line-height) * var(--type-ratio)) / var(--base-type-size));
+  margin: calc( (var(--base-line-height) * var(--type-ratio)) / var(--base-type-size) * 1em) 0; }
 
-h4, .h4 {
-  
-}
+main {
+  max-width: 85rem;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 57rem) {
+    main {
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: 12rem 1fr 12rem; } }
+  @media (min-width: 86rem) {
+    main {
+      margin: 0 auto;
+      grid-template-columns: 23rem 1fr 12rem; } }
 
+header,
+footer {
+  border: 1px solid pink;
+  padding: 100px 0;
+  max-width: 85rem;
+  margin: 1rem; }
+  @media (min-width: 86rem) {
+    header,
+    footer {
+      margin: 1rem auto; } }
+
+aside {
+  grid-column: 1;
+  border: 1px solid red;
+  padding: 100px 0;
+  order: 1; }
+  @media (min-width: 57rem) {
+    aside {
+      order: 0; } }
+
+article {
+  grid-column: 2;
+  border: 1px solid blue;
+  padding: 100px 0;
+  order: 1; }
+  @media (min-width: 57rem) {
+    article {
+      order: 0; } }
+
+nav {
+  grid-column: 3;
+  border: 1px solid green;
+  padding: 100px 0; }
+  @media (min-width: 57rem) {
+    nav {
+      position: sticky;
+      top: 0; } }
 
 *:target {
-  background-color: yellow;
-}
+  background-color: yellow; }
 
 @supports (animation: highlight) {
   *:target {
     background-color: transparent;
-    animation: highlight 2s;
-  }
-}
+    animation: highlight 2s; } }
 
+/* animations */
 @keyframes highlight {
   from {
-    background-color: yellow;
-  }
+    background-color: yellow; }
   to {
-    background-color: transparent;
-  }
-}
+    background-color: transparent; } }
 
 a:focus {
-  outline: 1px solid;
-}
+  outline: 1px solid; }
+
+/*# sourceMappingURL=styles.css.map */
