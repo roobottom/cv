@@ -1,52 +1,46 @@
 @font-face {
-  font-family: 'YoungSerif';
-  src: url('@{font_path}YoungSerif.woff2') format('woff2');
+  font-family: 'Tiempos';
+  src: url('@{font_path}tiempos-headline-web-black.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'Orkney';
-  src: url('@{font_path}Orkney Regular.woff2') format('woff2');
+  font-family: 'Debut';
+  src: url('@{font_path}DebutSans-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Orkney';
-  src: url('@{font_path}Orkney Bold.woff2') format('woff2');
+  font-family: 'Debut';
+  src: url('@{font_path}DebutSans-Black.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Orkney';
-  src: url('@{font_path}Orkney Regular Italic.woff2') format('woff2');
+  font-family: 'Debut';
+  src: url('@{font_path}DebutSans-RegularItalic.woff2') format('woff2');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'Orkney';
-  src: url('@{font_path}Orkney Bold Italic.woff2') format('woff2');
+  font-family: 'Debut';
+  src: url('@{font_path}DebutSans-BlackItalic.woff2') format('woff2');
   font-weight: bold;
   font-style: italic;
 }
 
-@font-face {
-  font-family: 'Fira Code';
-  src: url('@{font_path}FiraCode.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
 
 #type {
   #font {
       .serif() {
-          font-family: 'YoungSerif', serif;
+          font-family: 'Tiempos', serif;
           font-weight: normal;
           font-style: normal;
       }
       .sans() {
-          font-family: 'Orkney', sans-serif;
+          font-family: 'Debut', sans-serif;
       }
   }
   #size {
@@ -54,8 +48,8 @@
           font-size: unit(16/@base,rem);
           line-height: 24 / 16;
           .break-mid({
-              font-size: unit(19/@base,rem);
-              line-height: 34 / 19;
+              font-size: unit(22/@base,rem);
+              line-height: 34 / 22;
           });
       }
       .compact() {
@@ -119,15 +113,8 @@
       .link() {
         color: @c_blue;
         text-decoration: underline;
-        &:visited {
-          color: @c_purple;
-        }
-        &:visited:focus,
-        &:visited:active {
-          color: @c_grey_dark;
-        }
         &:focus {
-          color: @c_grey_x-dark;
+          color: black;
           background-color: @c_yellow;
           box-shadow: 0 -2px @c_yellow, 0 4px @c_grey_x-dark;
           text-decoration: none;
@@ -136,10 +123,7 @@
           color: @c_grey_x-dark;
         }
         &:hover {
-          color: darken(@c_blue, 20%);
-        }
-        &:visited:hover {
-          color: darken(@c_purple, 20%);
+          text-decoration-thickness: 3px;
         }
         
       }
@@ -155,6 +139,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
+  #type > #font > .serif;
   #type > #size > .h2;
 }
 
@@ -163,7 +148,9 @@ h3, .h3 {
 }
 h4, .h4 {
   #type > #size > .large;
-  font-variant-caps: all-small-caps;
+  font-variant-caps: small-caps;
+  font-variant: small-caps;
+  
   font-weight: bold;
 }
 
