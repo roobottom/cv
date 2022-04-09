@@ -15,7 +15,7 @@
     "markdown-it": "^10.0.0",
     "markdown-it-attrs": "^3.0.2",
     "markdown-it-div": "^1.1.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "prince": "^1.8.0",
     "util": "^0.12.1"
   },
