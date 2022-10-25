@@ -9,15 +9,33 @@ I’ve been producing engaging online experiences since my 28K dial-up modem was
 {% endmarkdown %}
 {% endset %}
 
+{% set role_madetech %}
+{% markdown %}
+### User-Centered Principal at Made Tech {.margin-bottom-quarter}
+
+from November 2021 {.date}
+
+Made Tech are a technology delivery agency to the UK public sector. I'm part of the user-centred practice, reporting directly to the Head of Design. My responsibilities include:
+
+* Hiring designers and user researchers
+* Managing and mentoring lead and senior designers
+* Working with clients to shape digital projects
+* Writing bids that win work
+* Helping to build a community of designers and researchers
+* Working with cross-functional teams to guide user-centred work
+{.bullets}
+{% endmarkdown %}
+{% endset %}
+
 {% set role_roodesign %}
 {% markdown %}
-### Designer at Roodesign {.margin-bottom-quarter}
+### Interaction and Service Designer {.margin-bottom-quarter}
 
-from October 2018 {.date}
+from October 2018 to November 2021 {.date}
 
-I run [Roodesign](https://roodesign.co.uk) a design consultancy dedicated to helping organisations of all sizes transform their services and products through human-centred design.
+I ran [Roodesign](https://roodesign.co.uk) a design consultancy dedicated to helping organisations of all sizes transform their services and products through human-centred design.
 
-Over the last few years, I've produced transformational services for government departments like HMRC and The Home Office. I also help smaller organisations to build effective processes and teams. 
+Over the last few years, I've produced services for government departments like HMRC, The Home Office and DLUHC. I also help smaller organisations to build effective processes and teams. 
 
 Recent case studies:
 
@@ -113,7 +131,7 @@ Each time I make an update, a new PDF version is built automatically. You can [v
 
 {# render page #}
 <header class="grid">
-  <h1 class="grid-full margin-bottom-double"><span class="h1-sub">Hello, I’m <a href="https://cv.roobottom.com" rel="me">Jon Roobottom</a>, </span>a designer with two decades of experience in creating digital products and services</h1>
+  <h1 class="grid-full margin-bottom-double"><span class="h1-sub">Hello, I’m <a href="https://cv.roobottom.com" rel="me">Jon Roobottom</a>, </span>a designer with two decades experience of creating digital products and services</h1>
   <div class="lead">
     {{ intro | safe }}
   </div>
@@ -122,6 +140,9 @@ Each time I make an update, a new PDF version is built automatically. You can [v
 <main class="grid">
   <h2 id="experience" class="timeline-heading">Experience</h2>
   <section class="timeline">
+    <article class="timeline-item">
+      {{ role_madetech | safe }}
+    </article>
     <article class="timeline-item">
       {{ role_roodesign | safe }}
     </article>
