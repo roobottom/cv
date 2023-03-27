@@ -1,157 +1,28 @@
 ---
-title: "Jon Roobottom's CV"
+title: "Jon Roobottom’s CV"
 layout: article.njk
 ---
 {# markdown content #}
-{% set intro %}
-{% markdown %}
-I’ve been producing engaging online experiences since my 28K dial-up modem was a cutting-edge piece of kit. Nowadays, I help organisations build great products, manage happy teams and have potent ideas.
-{% endmarkdown %}
-{% endset %}
 
-{% set role_madetech %}
-{% markdown %}
-### User-Centered Principal at Made Tech {.margin-bottom-quarter}
-
-from November 2021 {.date}
-
-Made Tech are a technology delivery agency to the UK public sector. I'm part of the user-centred practice, reporting directly to the Head of Design. My responsibilities include:
-
-* Hiring designers and user researchers
-* Managing and mentoring lead and senior designers
-* Working with clients to shape digital projects
-* Writing bids that win work
-* Helping to build a community of designers and researchers
-* Working with cross-functional teams to guide user-centred work
-{.bullets}
-{% endmarkdown %}
-{% endset %}
-
-{% set role_roodesign %}
-{% markdown %}
-### Interaction and Service Designer {.margin-bottom-quarter}
-
-from October 2018 to November 2021 {.date}
-
-I ran [Roodesign](https://roodesign.co.uk) a design consultancy dedicated to helping organisations of all sizes transform their services and products through human-centred design.
-
-Over the last few years, I've produced services for government departments like HMRC, The Home Office and DLUHC. I also help smaller organisations to build effective processes and teams. 
-
-Recent case studies:
-
-* [Accessible Corporation Tax](https://roodesign.co.uk/work/cato)
-* [Helping taxpayers when they're due a refund](https://roodesign.co.uk/work/vat-repayment-tracker)
-* [Improving design process at Onalytica](https://roodesign.co.uk/work/onalytica)
-{.bullets}
-{% endmarkdown %}
-{% endset %}
-
-{% set role_firefly %}
-{% markdown %}
-### Head of Design at Firefly Learning {.margin-bottom-quarter}
-
-September 2011 to October 2018 {.date}
-
-Firefly Learning is an award-winning Ed-Tech company started by two A-level students as a way to access their homework from anywhere. 
-
-I joined as the first designer when the company was four people in a tiny shared office space. In the final four years of my tenure, I helped grow Firefly to over 500 client schools and 60 staff across three international offices. 
-
-During my time at Firefly, I:
-
-* defined the research and design process
-* developed a design system
-* hired good people and helped them do their best work
-* helped grow the company to over 500 schools as a member of the senior leadership team
-* made an impact; "Design and functionality" were often top among the reasons quoted for schools renewing.
-{.bullets}
-
-You can [read more about my time at Firefly](https://roodesign.co.uk/work/leading-design-at-firefly-learning).
-{% endmarkdown %}
-{% endset %}
-
-
-
-{% set role_history %}
-{% markdown %}
-### Older roles
-
-* 2009 to 2011: UX developer at Onalytica
-* 2007 to 2008: Freelance web designer
-* 2006 to 2007: UI designer at Glaxstar
-* 2004 to 2007: Web designer at Key Web and Marketing
-{.bullets}
-{% endmarkdown %}
-{% endset %}
-
-{% set skills %}
-{% markdown %}
-### Design
-
-* Service design
-* UX design
-* UI design
-* Prototyping
-* Design systems 
-
-### Leadership & creativity
-
-* Workshop design & facilitation
-* Design process planning
-* Design thinking methodology
-* Mentoring
-* Stakeholder management
-
-### Development
-
-* HTML & CSS
-* JavaScript
-* Vue
-* Node
-* SASS & Less
-* Git
-{% endmarkdown %}
-{% endset %}
-
-{% set contact %}
-{% markdown %}
-* Location: Littlehampton (near Brighton)
-* Phone: 07766 256899
-* Email: [roo@roodesign.co.uk](mailto:roo@roodesign.co.uk)
-* Website: [roodesign.co.uk](https://roodesign.co.uk)
-{% endmarkdown %}
-{% endset %}
-
-{% set aboutCV %}
-{% markdown %}
-You can [download the latest PDF version of this CV](https://cv.roobottom.com/jon-roobottom-cv.pdf).
-
-Each time I make an update, a new PDF version is built automatically. You can [view the source code](https://github.com/roobottom/cv-2020) if you'd like.
-{% endmarkdown %}
-{% endset %}
 
 {# render page #}
 <header class="grid">
-  <h1 class="grid-full margin-bottom-double"><span class="h1-sub">Hello, I’m <a href="https://cv.roobottom.com" rel="me">Jon Roobottom</a>, </span>a designer with two decades experience of creating digital products and services</h1>
+  <h1 class="grid-full margin-bottom-double">{{ title }}</h1>
   <div class="lead">
-    {{ intro | safe }}
+    
   </div>
 </header>
 
 <main class="grid">
   <h2 id="experience" class="timeline-heading">Experience</h2>
   <section class="timeline">
+    {% for role in collections.experience | reverse %}
     <article class="timeline-item">
-      {{ role_madetech | safe }}
+     <h3 class="margin-bottom-quarter">{{ role.data.title }}</h3>
+     <p class="date">from {{ role.data.date | date }} {{ 'to ' + role.data.end | date if role.data.end }}</p>
+     {{ role.content | safe }}
     </article>
-    <article class="timeline-item">
-      {{ role_roodesign | safe }}
-    </article>
-    <article class="timeline-item">
-      {{ role_firefly | safe }}
-    </article>
-    <article class="timeline-item">
-      {{ role_history | safe }}
-    </article>
+    {% endfor %}
   </section>
   <h2 id="education" class="timeline-heading">Education</h2>
   <section class="timeline">
@@ -162,18 +33,18 @@ Each time I make an update, a new PDF version is built automatically. You can [v
   <h2 id="skills" class="timeline-heading">Skills</h2>
   <section class="timeline">
     <article class="timeline-item">
-      {{ skills | safe }}
+
     </article> 
   </section>
   <h2 id="contact" class="timeline-heading">Contact me</h2>
   <section class="timeline">
     <article class="timeline-item">
-      {{ contact | safe }}
+
     </article> 
   </section>
 
   <section class="teaser grid-full">
-    {{ aboutCV | safe }}
+
   </section>
 
 </main>
