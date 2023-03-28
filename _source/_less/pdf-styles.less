@@ -63,9 +63,7 @@ h1, .h1 {
 h2, .h2 {font-size: 14pt;}
 h3, .h3 {font-size: 10pt;}
 h4, .h4 {
-  font-size: 11pt;
-  text-transform: lowercase;
-  font-variant: small-caps;
+  font-size: 9pt;
 }
 p, ul, ol {
   font-size: 9pt;
@@ -75,7 +73,7 @@ p, ul, ol {
 li + li {
   margin-top: 1pt;
 }
-ul.bullets {
+.prose ul {
   margin-left: .5cm;
   li {
     list-style: disc;
@@ -91,7 +89,7 @@ h2, h3, h4, h5,
 }
 
 a {
-  color: @c_blue;
+  color: black;
 }
 
 //spacing modifiers
@@ -107,7 +105,7 @@ a {
 .timeline {
   padding-left: .5cm;
   width: calc(100% - .5cm);
-  border-left: 3px solid @c_grey_light;
+  border-left: 1px solid @c_grey_light;
   margin-bottom: 9pt * 3;
 
   &-item {
@@ -116,3 +114,17 @@ a {
   }
 }
 
+//skills
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  li {
+    display: block;
+    padding: .15cm .25cm;
+    border-radius: .25cm;
+    background-color: #F1F1F1;
+    font-size: 7pt;
+    margin-right: .1cm;
+    margin-bottom: .1cm;
+  }
+}

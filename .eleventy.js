@@ -1,6 +1,7 @@
 const markdownIt = require("markdown-it")
 const markdownItAttrs = require("markdown-it-attrs")
 const markdownItDiv = require("markdown-it-div")
+const { DateTime } = require("luxon")
 
 
 module.exports = function (config) {
@@ -20,6 +21,12 @@ module.exports = function (config) {
   config.addPairedShortcode("markdown", function(content) {
     return md.render(content)
   })
+  
+
+  config.addFilter("date", (dateObj, format = 'LLLL kkkk') => {
+    return DateTime.fromJSDate(dateObj).toFormat(format);
+  })
+
 
   //passthough
   config.addPassthroughCopy("_source/assets")

@@ -1,6 +1,10 @@
 .timeline {
 
   margin-bottom: @gap-rem * 2;
+
+  &-heading {
+    margin-bottom: @gap-rem;
+  }
   
   .break-mid({
     border-left: 6px solid @c_grey_light;
@@ -9,6 +13,7 @@
 
   &-item {
     margin: 0 0 @gap-rem * 2 0;
+    
     .break-mid({
       margin: 0 0 @gap-rem * 4 @gap-rem;
       >*:last-child {
@@ -17,43 +22,28 @@
       &:last-child {
         margin-bottom: 0;
       }
+      &-heading {
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: ~"calc(-1 * @{gap-rem})";
+        top: 50%;
+        height: 6px;
+        width: ~"calc(@{gap-rem} - 4px)";
+        background-color: @c_grey_light;
+      }
+    }
     });
   }
 }
 
-//animation for header
+
+
 header {
   
-  .break-mid({
-    //min-height: calc(100vh - (@gap-rem * 4));
-  });
-  
-  position: relative;
-
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-
-  &:before {
-    background-color: #F1F1F1;
-  }
-
-  &.animate:before {
-    animation: colours 10s infinite alternate;
-  }
-  
-  &:after {
-    background: url('/assets/images/pattern-zigzags.png') top left repeat;
-    opacity: .6;
-    mix-blend-mode: overlay;
-  }
+  background-color: #F1F1F1;
 
   p:last-child {
     margin-bottom: 0;
