@@ -16,7 +16,7 @@ const eleventyLocal = (callback) => {
   callback()
 }
 const eleventy = (callback) => {
-  cp.spawn("npx", ["@11ty/eleventy"], { stdio: "inherit" })
+  return cp.spawn("npx", ["@11ty/eleventy"], { stdio: "inherit" })
   callback()
 }
 
