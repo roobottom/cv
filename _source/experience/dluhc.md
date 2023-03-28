@@ -1,5 +1,5 @@
 ---
-title: Interaction designer at DLUHC — contract.
+title: Interaction designer at DLUHC - contract.
 date: 2021-08-01
 end: 2022-11-01
 ---
