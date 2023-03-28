@@ -111,19 +111,16 @@
   }
   #style {
       .link() {
-        color: @c_blue;
+        color: black;
         text-decoration: underline;
+        margin: ~"calc(-1 * @{gap-rem} / 4)";
+        padding: ~"calc(@{gap-rem} / 4)";
         &:focus {
-          color: black;
-          background-color: @c_yellow;
-          box-shadow: 0 -2px @c_yellow, 0 4px @c_grey_x-dark;
+          outline: 1px solid black;
           text-decoration: none;
         }
-        &:active {
-          color: @c_grey_x-dark;
-        }
         &:hover {
-          text-decoration-thickness: 3px;
+          text-decoration-thickness: 5px;
         }
         
       }
@@ -143,14 +140,10 @@ h2, .h2 {
 }
 
 h3, .h3 {
-#type > #size > .h3;
+  #type > #size > .h3;
 }
 h4, .h4 {
-  #type > #size > .large;
-  font-variant-caps: small-caps;
-  font-variant: small-caps;
-  
-  font-weight: bold;
+  #type > #size > .regular;
 }
 
 body, input, textarea, button {
@@ -175,7 +168,7 @@ body, input, textarea, button {
   }
 }
 
-p, ol, ul, h4, h5, h6 {
+p, ol, ul, h5, h6 {
   #type > #size > .regular;
 }
 .lead,
@@ -183,7 +176,7 @@ p, ol, ul, h4, h5, h6 {
   #type > #size > .large;
 }
 time, .date {
-  #type > #size > .small;
+  #type > #size > .compact;
   color: @c_grey_dark;
   display: inline-block;
 }
@@ -198,22 +191,28 @@ max-width: 100%;
 display: block;
 }
 
-//virtical rhythm 
-li + li {
-  margin-top: unit(2/@base,rem);
-}
-p, ol, ul, h2, h4, h5, h6, time {
-  margin-bottom: @gap-rem;
-}
-h3 {
-  margin-bottom: @gap-rem / 2;
-}
-p+h2, ul+h2, ol+h2,
-p+h3, ul+h3, ol+h3 {
-  margin-top: @gap-rem * 2;
-}
-figure {
-  margin-bottom: @gap-rem/2;
+//virtical prose 
+.prose {
+  li + li {
+    margin-top: unit(2/@base,rem);
+  }
+  p, ol, ul, h2, h4, h5, h6, time {
+    margin-bottom: @gap-rem;
+  }
+  h3 {
+    margin-bottom: @gap-rem / 2;
+  }
+  p+h2, ul+h2, ol+h2,
+  p+h3, ul+h3, ol+h3 {
+    margin-top: @gap-rem * 2;
+  }
+  figure {
+    margin-bottom: @gap-rem/2;
+  }
+  li { 
+    list-style: '— '; 
+    margin-left: @gap-rem;
+  }
 }
 //type helpers
 .margin-top-half {
@@ -252,9 +251,6 @@ main {
   a {
     #type > #style > .link;
   }
-}
-h3, h4, h5, h6 {
-  font-weight: bold;
 }
 
 //lists {
