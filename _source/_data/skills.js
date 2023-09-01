@@ -3,15 +3,23 @@ module.exports = {
     'User-centred design',
     'Service design',
     'Interaction design',
+    'User research',
     'Prototyping',
-    'Design systems'
+    'Service mapping',
+    'Design systems',
+    'Accessibilty',
+    'Risk analysis',
+    'Processes design'
   ],
-  'Leadership and creativity': [
+  'Leadership': [
     'Workshop design and facilitation',
-    'Design process planning',
+    'Product & service strategy',
     'Design thinking methodology',
+    'Stakeholder management',
+    'Storytelling',
+    'Agile methodolgies',
     'Mentoring',
-    'Consulting'
+    'Facilitation'
   ],
   'Development': [
     'HTML, CSS and Javascript',

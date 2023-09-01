@@ -5,18 +5,32 @@ layout: article.njk
 <header class="grid">
   <h1 class="grid-full margin-bottom-double">{{ title }}</h1>
   <div class="lead">
-    <p>I’m a designer with two decades experience of creating digital products and services. Nowadays, I help organisations build great products, manage happy teams and have potent ideas.</p>
+    <p>I’m a designer with two decades experience of creating user-centred products and services. I help organisations build great products, manage happy agile teams and have potent ideas.</p>
   </div>
 </header>
 
 <main class="grid">
+
+  <h2 id="skills" class="timeline-heading">Skills</h2>
+  <section class="timeline">
+    <article class="timeline-item">
+      {% for title, skillsGroup in skills %}
+      <h3 class="margin-bottom-single {% if not loop.first %}margin-top-single{% endif %}">{{ title }}</h3>
+      <ul class="skills">
+        {%- for skill in skillsGroup %}
+        <li>{{ skill }}</li>
+        {% endfor -%}
+      </ul>
+     {% endfor %}
+    </article> 
+  </section>
   
   <h2 id="experience" class="timeline-heading">Experience</h2>
   <section class="timeline">
     {% for role in collections.experience | reverse %}
     <article class="timeline-item">
      <h3 class="margin-bottom-quarter timeline-item-heading">{{ role.data.title }}</h3>
-     <p class="date margin-bottom-half">from {{ role.data.date | date }} {{ 'to ' + role.data.end | date if role.data.end }}</p>
+     <p class="date margin-bottom-single">from {{ role.data.date | date }} {{ 'to ' + role.data.end | date if role.data.end }}</p>
      <div class="prose">
      {{ role.content | safe }}
      </div>
@@ -31,20 +45,6 @@ layout: article.njk
     </article>
   </section>
   
-  <h2 id="skills" class="timeline-heading">Skills</h2>
-  <section class="timeline">
-    <article class="timeline-item">
-      {% for title, skillsGroup in skills %}
-      <h4 class="margin-bottom-quarter {% if not loop.first %}margin-top-single{% endif %}">{{ title }}</h4>
-      <ul class="skills">
-        {%- for skill in skillsGroup %}
-        <li>{{ skill }}</li>
-        {% endfor -%}
-      </ul>
-     {% endfor %}
-    </article> 
-  </section>
-  
   <h2 id="contact" class="timeline-heading">Contact me</h2>
   <section class="timeline">
     <article class="timeline-item">
@@ -54,6 +54,7 @@ layout: article.njk
           <li>Phone 07766 256899</li>
           <li>Email <a href="mailto:roo@roodesign.co.uk">roo@roodesign.co.uk</a></li>
           <li>Websites <a href="https://roodesign.co.uk">roodesign.co.uk</a> and <a href="https://roobottom.com">roobottom.com</a></li>
+          <li><a href="https://www.linkedin.com/in/roobottom">LinkedIn</a></li>
         </ul>
       </div>
     </article> 

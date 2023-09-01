@@ -48,8 +48,8 @@
           font-size: unit(16/@base,rem);
           line-height: 24 / 16;
           .break-mid({
-              font-size: unit(22/@base,rem);
-              line-height: 34 / 22;
+              font-size: unit(20/@base,rem);
+              line-height: 34 / 20;
           });
       }
       .compact() {
@@ -177,7 +177,6 @@ p, ol, ul, h5, h6 {
 }
 time, .date {
   #type > #size > .compact;
-  color: @c_grey_dark;
   display: inline-block;
 }
 .sc {
@@ -208,10 +207,6 @@ display: block;
   }
   figure {
     margin-bottom: @gap-rem/2;
-  }
-  li { 
-    list-style: '— '; 
-    margin-left: @gap-rem;
   }
 }
 //type helpers
@@ -254,11 +249,14 @@ main {
 }
 
 //lists {
-ul.bullets {
+ul {
   li {list-style-image: url('@{img_path}bullet.svg');}
   li li {list-style-image: url('@{img_path}bullet-level-2.svg');}
   li li li {list-style: square;}
-  li { margin-left: 1em; }
+  li { 
+    margin-left: .7em;
+    padding-left: .3em;
+  }
 }
 
 ol li li {list-style-type: lower-alpha;}
