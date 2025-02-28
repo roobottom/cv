@@ -29,9 +29,9 @@
         display: block;
         position: absolute;
         left: ~"calc(-1 * @{gap-rem})";
-        top: 50%;
+        top: calc(.75rem + 1px);
         height: 6px;
-        width: ~"calc(@{gap-rem} - 4px)";
+        width: ~"calc(@{gap-rem} - 6px)";
         background-color: @c_grey_med;
       }
     }
@@ -42,30 +42,12 @@
 
 
 header {
-  
-  background-color: #F1F1F1;
-
+  background-color: @c_yellow;
+  box-shadow: 
+    0 6px 0 darken(@c_yellow, 10%);
   p:last-child {
     margin-bottom: 0;
   }
   
   
-}
-
-@keyframes colours {
-  0% {
-    background-color: @c_yellow;
-  }
-  20% {
-    background-color: @c_green;
-  }
-  40% {
-    background-color: @c_blue;
-  }
-  60% {
-    background-color: @c_purple;
-  }
-  80% {
-    background-color: @c_red;
-  }
 }

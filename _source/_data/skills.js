@@ -7,9 +7,7 @@ module.exports = {
     'Prototyping',
     'Service mapping',
     'Design systems',
-    'Accessibilty',
-    'Risk analysis',
-    'Processes design'
+    'Web accessibility'
   ],
   'Leadership': [
     'Workshop design and facilitation',
@@ -17,12 +15,11 @@ module.exports = {
     'Design thinking methodology',
     'Stakeholder management',
     'Storytelling',
-    'Agile methodolgies',
     'Mentoring',
     'Facilitation'
   ],
   'Development': [
     'HTML, CSS and Javascript',
-    'Various JAMSTACK technologies'
+    'JAMSTACK technologies'
   ]
 }

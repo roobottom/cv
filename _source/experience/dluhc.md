@@ -1,5 +1,5 @@
 ---
-title: Lead Service Designer at DLUHC (contract)
+title: Lead Service Designer at Ministry of Housing and Local Government
 date: 2021-08-01
 end: 2021-11-01
 ---

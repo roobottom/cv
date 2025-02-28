@@ -1,5 +1,5 @@
 ---
-title: Senior Service Designer at the Home Office (contract)
+title: Senior Service Designer at the Home Office
 date: 2021-04-01
 end: 2021-08-01
 ---

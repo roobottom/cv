@@ -1,5 +1,5 @@
 ---
-title: Senior Interaction Designer at HMRC - Live Services Team (contract)  
+title: Senior Interaction Designer at HMRC - Live Services Team 
 date: 2020-01-01  
 end: 2021-04-01  
 ---

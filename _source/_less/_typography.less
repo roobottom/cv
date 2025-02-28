@@ -1,46 +1,16 @@
-@font-face {
-  font-family: 'Tiempos';
-  src: url('@{font_path}tiempos-headline-web-black.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Debut';
-  src: url('@{font_path}DebutSans-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Debut';
-  src: url('@{font_path}DebutSans-Black.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Debut';
-  src: url('@{font_path}DebutSans-RegularItalic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Debut';
-  src: url('@{font_path}DebutSans-BlackItalic.woff2') format('woff2');
-  font-weight: bold;
-  font-style: italic;
-}
-
-
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 #type {
   #font {
       .serif() {
-          font-family: 'Tiempos', serif;
-          font-weight: normal;
-          font-style: normal;
+          font-family: 'Unna', serif;
       }
       .sans() {
-          font-family: 'Debut', sans-serif;
+          font-family: 'Unna', sans-serif;
+      }
+      .mono() {
+        font-family: "Ubuntu Mono";
+        font-style: normal;
+        font-weight: normal;
       }
   }
   #size {
@@ -83,6 +53,7 @@
       .h1() {
           font-size: unit(32/@base, rem);
           line-height: 38 / 32;
+          font-weight: bold;
           .break-mid({
               font-size: unit(44/@base, rem);
               line-height: 48 / 44;

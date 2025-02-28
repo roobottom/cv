@@ -1,5 +1,5 @@
 ---
-title: Senior Interaction Designer at HMRC - Payments Team (contract)  
+title: Senior Interaction Designer at HMRC - Payments Team
 date: 2019-04-01  
 end: 2020-01-01  
 ---
