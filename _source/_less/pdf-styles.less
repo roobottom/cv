@@ -45,7 +45,7 @@ header, main {
   @bottom-center {
     font-size: 9pt;
     color: @c_grey_dark;
-    content: "Jon Roobottom’s CV — Page " counter(page) " of " counter(pages);
+    content: "Jon Roo’s CV — Page " counter(page) " of " counter(pages);
     font-family: 'Orkney';
   }
 }
@@ -116,15 +116,40 @@ a {
 
 //skills
 .skills {
-  display: flex;
-  flex-wrap: wrap;
-  li {
-    display: block;
-    padding: .15cm .25cm;
-    border-radius: .25cm;
-    background-color: #F1F1F1;
-    font-size: 7pt;
-    margin-right: .1cm;
-    margin-bottom: .1cm;
+  margin: 0;
+
+  &-item {
+    padding: .18cm 0;
+    border-top: 1px solid @c_grey_light;
+
+    &:first-child {
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &-title {
+    font-size: 9pt;
+    line-height: 12/9;
+    font-weight: bold;
+    margin-bottom: 3pt;
+  }
+
+  &-description {
+    font-size: 9pt;
+    line-height: 12/9;
+    margin: 0;
+  }
+}
+
+.course {
+  margin-bottom: 9pt * 1.5;
+
+  &-provider {
+    margin-bottom: 0;
   }
 }

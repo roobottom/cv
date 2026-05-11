@@ -23,7 +23,7 @@ const eleventy = (callback) => {
 const pdf = (callback) => {
   prince()
     .inputs('./_site/index.html')
-    .output('./_site/jon-roobottom-cv.pdf')
+    .output('./_site/jon-roo-cv.pdf')
     .option('style', './_site/assets/pdf-styles.css')
     .execute()
     .then(function () {

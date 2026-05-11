@@ -1,0 +1,7 @@
+{% for course in courses %}
+<article class="timeline-item course">
+  <h3 class="margin-bottom-quarter timeline-item-heading">{{ course.title }}</h3>
+  <p class="date margin-bottom-quarter">{{ course.dateLabel }}</p>
+  <p class="course-provider">{{ course.provider }}</p>
+</article>
+{% endfor %}

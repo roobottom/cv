@@ -3,15 +3,9 @@ title: Principal Designer at Made Tech
 date: 2021-11-01
 end: 2024-04-01
 ---
-Made Tech is a public sector consultancy specialising in user-centred design. Their community of practice is ~80 permanent user-centred professionals across research, design, product and business analysis.
+I joined as Made Tech’s first Principal Designer, establishing design as a credible discipline within an engineering-led consultancy of around 80 UCD professionals.
 
-I worked across several of Made Tech’s key client accounts, including Government Digital Service, the Home Office and Department for Levelling Up (now called the Ministry of Housing and Local Government).
-
-- Shaping user-centred projects that align with our client’s strategies and GDS best practices.
-- Developing relationships with key senior stakeholders.
-- Helping to build a happy, healthy community of practice.
-- Evolving Made Tech’s approach to interaction and service design.
-- Leading cross-functional teams to guide user-centred work.
-- Hands-on interaction and service design.
-- Hiring and managing skilled designers.
-- Writing bids that win work.
+- I shaped design culture through regular crits, away days and internal talks, building shared standards across the practice.
+- I led design across four major government accounts including GDS and the Home Office, overseeing quality and strategy for 8 designers on the Home Office account alone.
+- I delivered the CORE social housing data service at MHCLG, cutting cost per transaction from £2.01 to £1.03, achieving 100% CSAT in private beta, and passing both alpha and beta GDS assessments.
+- I contributed to bid writing across key government frameworks.

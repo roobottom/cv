@@ -1,11 +1,11 @@
 ---
-title: "Jon Roobottom"
+title: "Jon Roo"
 layout: article.njk
 ---
 <header class="grid">
   <h1 class="grid-full margin-bottom-double">{{ title }}</h1>
   <div class="lead">
-    <p>I’m a designer with two decades experience of creating user-centred products and services. I help organisations build great products, manage happy agile teams and have potent ideas.</p>
+    <p>I’m a Principal UX designer with 20 years’ experience leading user-centred design across healthcare, central government and the private sector. I’ve built and managed design teams, bringing design craft, stakeholder influence, and the commercial instincts to grow a practice.</p>
   </div>
 </header>
 
@@ -14,15 +14,8 @@ layout: article.njk
   <h2 id="skills" class="timeline-heading">Skills</h2>
   <section class="timeline">
     <article class="timeline-item">
-      {% for title, skillsGroup in skills %}
-      <h3 class="margin-bottom-single {% if not loop.first %}margin-top-single{% endif %}">{{ title }}</h3>
-      <ul class="skills">
-        {%- for skill in skillsGroup %}
-        <li>{{ skill }}</li>
-        {% endfor -%}
-      </ul>
-     {% endfor %}
-    </article> 
+      {% include "components/skills-definition-list.njk" %}
+    </article>
   </section>
   
   <h2 id="experience" class="timeline-heading">Experience</h2>
@@ -30,7 +23,7 @@ layout: article.njk
     {% for role in collections.experience | reverse %}
     <article class="timeline-item">
      <h3 class="margin-bottom-quarter timeline-item-heading">{{ role.data.title }}</h3>
-     <p class="date margin-bottom-single">from {{ role.data.date | date }} {{ 'to ' + role.data.end | date if role.data.end }}</p>
+     <p class="date margin-bottom-single">from {{ role.data.date | date }} to {% if role.data.end %}{{ role.data.end | date }}{% else %}present{% endif %}</p>
      <div class="prose">
      {{ role.content | safe }}
      </div>
@@ -41,8 +34,13 @@ layout: article.njk
   <h2 id="education" class="timeline-heading">Education</h2>
   <section class="timeline">
     <article class="timeline-item">
-      <p>2:1 BSc (HONS) Multimedia Technology from the University of Huddersfield in 2003</p>
+      <p>2:1 BSc (Hons) in Multimedia Technology from the University of Huddersfield in 2003.</p>
     </article>
+  </section>
+
+  <h2 id="courses" class="timeline-heading">Courses and certifications</h2>
+  <section class="timeline">
+    {% include "components/courses-list.njk" %}
   </section>
   
   <h2 id="contact" class="timeline-heading">Contact me</h2>
@@ -62,7 +60,7 @@ layout: article.njk
 
   <section class="teaser">
     <div class="prose">
-      <p><a href="https://cv.roobottom.com/jon-roobottom-cv.pdf">Download a PDF</a>.</p>
+      <p><a href="https://cv.roobottom.com/jon-roo-cv.pdf">Download a PDF</a>.</p>
       <p>Each time I make an update, a new PDF version is built automatically. You can <a href="https://github.com/roobottom/cv">view the source code</a> if you’d like.</p>
     </div>
   </section>

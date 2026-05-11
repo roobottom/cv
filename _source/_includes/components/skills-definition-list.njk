@@ -1,0 +1,8 @@
+<dl class="skills">
+  {% for skill in skills %}
+  <div class="skills-item">
+    <dt class="skills-title">{{ skill.title }}</dt>
+    <dd class="skills-description">{{ skill.description }}</dd>
+  </div>
+  {% endfor %}
+</dl>
